@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" type="image/gif/png" href="/assets/IR_logogram_normal.png">  
     <title>Incident Report</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -11,6 +12,22 @@
   </head>
 
   <body>
+    <nav class="navbar is-fixed-top">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="/assets/IR_logo_normal.png">
+        </a>
+        <a class="navbar-item">Home</a>
+        <a class="navbar-item">Daftar Kejadian</a>
+        <a class="navbar-item">Rekapitulasi Kejadian</a>
+        <a class="navbar-item">About Us</a>
+      </div>
+      <div class="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
