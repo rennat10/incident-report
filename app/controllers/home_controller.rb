@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     end
 
 
-    def coba
+    def filterMap
     end
     
 end

@@ -16,6 +16,12 @@
 
 @import "bulma";
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
     width: 100%;
     padding: .3rem 1rem;
@@ -37,19 +43,23 @@ a.navbar-item img {
 }
 
 a.navbar-item.active {
-
+    color: #6B0000;
 }
 
 a.navbar-item:hover {
     color: #6B0000;
 }
 
-.hamburger-menu {
+#hamburger-menu {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.hamburger-menu div {
+#hamburger-menu:hover {
+    cursor: pointer;
+}
+
+#hamburger-menu div {
     width: 18px;
     height: 3px;
     background-color: #D50000;

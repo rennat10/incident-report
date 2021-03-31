@@ -1,0 +1,69 @@
+<div class="main-container">
+    <div id="mySidebar" class="sidebar">
+        <form method="post">
+            <div class="field">
+                <p>Rentang Waktu</p>
+                <label for="timestart">Dari</label>
+                <div class="control">
+                    <input type="text" class="input" name="timestart" id="timestart" placeholder="Dari">
+                </div>
+            </div>
+            <div class="field">
+                <label for="timeend">Sampai</label>
+                <div class="control">
+                    <input type="text" class="input" name="timeend" id="timeend" placeholder="Sampai">
+                </div>
+            </div>
+            <button type="submit" class="button is-light" id="submitfilter">Submit</button>
+        </form>
+    </div>
+    <div id="map" style="width: 100%; height: 100%;"></div>
+</div>
+
+<%# <%= javascript_pack_tag 'incident', 'data-turbolinks-track': 'reload' %> 
+<%# <script type="text/javascript" src="/assets/javascript/incident.js"></script> %>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_non-Np3MA8Qr2T2vir2R8T4MTMj_43E&callback=initMap&libraries=places"></script>
+<script>
+    $(document).ready(function(){
+        $(".navbar .navbar-brand a.navbar-item:nth-child(2)").addClass("active");
+    });
+
+    $(function() {
+            $('input[name="timestart"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 2010,
+                maxYear: parseInt(moment().format('YYYY'),10),
+                timePicker: true,
+                timePicker24Hour: true,
+                locale: {
+                    format: 'YYYY-MM-DD HH:mm:ss'
+                }
+            });
+
+            $('input[name="timeend"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 2010,
+                maxYear: parseInt(moment().format('YYYY'),10),
+                timePicker: true,
+                timePicker24Hour: true,
+                locale: {
+                    format: 'YYYY-MM-DD HH:mm:ss'
+                }
+            });
+        });
+
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+
+            $(this).one("click", closeNav);
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            
+            $(this).one("click", openNav);
+        }
+        $("#hamburger-menu").one("click", openNav);
+</script>

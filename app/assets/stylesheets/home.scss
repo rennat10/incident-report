@@ -1,3 +1,62 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #D50000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 84px;
+}
+
+.sidebar div p {
+    // padding: 8px 10px;
+    margin-left: 5%;
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgba(255,255,255,1);
+    display: block;
+    transition: 0.3s;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+.field label {
+    // margin: 0 12px;
+    margin-left: 5%;
+    font-size: 0.9rem;
+    color:  rgba(255,255,255,.5);
+}
+
+.field .control input.input {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.field .control select.input {
+    margin-left: 5%;
+    width: 90%;
+}
+
+#submitfilter {
+    width: 90%;
+    // margin: 2rem auto;
+    margin-left: 5%;
+    margin-top: 1.5rem;
+}
+
+.main-container {
+    height: calc(100% - 70.6px);
+    width: 100%;
+    margin-top: 70.6px;
+}
